@@ -7,3 +7,10 @@ MOV AL, 00   : set value of register AL to 00
 ADC AL, AL   : add contents of register AL to AL with carry
 MOV [601], AL: store data from register AL to offset 601
 HLT          : stop
+
+INPUT:
+9000 --- 35H
+9001 --- 72H
+OUPUT:
+9002 --- 07H
+9003 --- 01H
