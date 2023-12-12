@@ -1,0 +1,9 @@
+MOV AL, [500]: load data from offset 500 to register AL
+MOV BL, [501]: load data from offset 501 to register BL
+ADD AL, BL: ADD contents of registers AL AND BL
+DAA: decimal adjust AL
+MOV [600], AL: store data from register AL to offset 600
+MOV AL, 00: set value of register AL to 00
+ADC AL, AL: add contents of register AL to AL with carry
+MOV [601], AL: store data from register AL to offset 601
+HLT: stop
