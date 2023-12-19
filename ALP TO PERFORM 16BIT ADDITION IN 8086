@@ -1,0 +1,21 @@
+org 100h
+Mov Ax,1000h
+mov ds,ax #DATA SEGMENT
+mov si,9000h #SOURCE INDEX
+mov ax,[si] #SOURCE INDEX LO VUNNA DATA NI ACCUMULATOR LO CHUPINCHU n1
+inc si #source index lo vunna content ni increment chey 9002h
+inc si  #source index lo vunna content ni increment chey 9003h
+mov dx,[si] #source index lo vunna content 
+add ax,dx #add ax and dx and store in ax
+inc si #increment si 9004h
+inc si #increment si 9005h
+mov [si],ax #acc lo vunna result ni si lo kudha move chey
+int 3 #HALT
+INPUT
+19000H = 05H
+19001H = 06H
+19002H = 01H
+19003H = 03H
+OUTPUT 
+19004H = 06H
+19005H = 09H
