@@ -1,4 +1,21 @@
-MOV CX,0000H
-MOV AX,[5000H] <--1212
-MOV BX,[5002H] <--E060
-SUB AX,BX <--AX = AX-BX
+org 100h
+Mov Ax,1000h
+mov ds,ax #DATA SEGMENT
+mov si,9000h #SOURCE INDEX
+mov ax,[si] #SOURCE INDEX LO VUNNA DATA NI ACCUMULATOR LO CHUPINCHU n1
+inc si #source index lo vunna content ni increment chey 9002h
+inc si  #source index lo vunna content ni increment chey 9003h
+mov dx,[si] #source index lo vunna content 
+sub ax,dx #SUB  ax and dx and store in ax
+inc si #increment si 9004h
+inc si #increment si 9005h
+mov [si],ax #acc lo vunna result ni si lo kudha move chey
+int 3 #HALT
+INPUT
+19000H =   AAH
+19001H = AAH
+19002H = 11H
+19003H = 11H
+OUTPUT 
+19004H = 99H
+19005H = 99H
